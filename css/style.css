@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Russo One', sans-serif;
+}
+
+body {
+    background-color: #fff000;
+}
+
+.main-mobile {
+    display: none;
+}
+.main {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.main h2 {
+    position: relative;
+    opacity: 0;
+    transition: opacity 1s linear;
+    font-size: 150px;
+}
+
+.text {
+    background: rgb(78,13,74);
+    background: linear-gradient(183deg, rgba(78,13,74,1) 0%, rgba(249,21,73,1) 100%);
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    transition: 1s;
+
+}
+
+section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+@media (max-width: 1300px) {
+    .main {
+        display: none;
+    }
+    .main-mobile {
+        max-height: 600px;
+        display: block;
+        background-color: #fc466b;
+        background-image: linear-gradient(45deg, #fc466b,#3f5efb);
+        background-size: 100%;
+        background-repeat: repeat;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-background-clip: text;
+        -moz-text-fill-color: transparent;
+    }
+    .main-mobile h2 {
+        margin: 100px auto;
+        text-align: center;
+        font-size: 40px;
+    }
+}

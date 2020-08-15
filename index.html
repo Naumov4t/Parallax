@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mousemove Parallax | Vanilla Javascript</title>
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <section>
+
+    <section class="main-mobile">
+        <h2>This app has only a desktop version! c;</h2>
+    </section>
+
+    <section class="main">
         <img src="img/1.png" data-speed ="12" alt="" class="layer">
         <img src="img/2.png" data-speed ="-1" alt="" class="layer">
         <img src="img/3.png" data-speed ="8" alt="" class="layer">
@@ -20,20 +25,8 @@
         <img src="img/10.png" data-speed ="6" alt="" class="layer">
         <img src="img/11.png" data-speed ="-7" alt="" class="layer">
         <img src="img/12.png" data-speed ="5" alt="" class="layer">
-        <h2 class="layer text">Be strong</h2>
+        <h2 class="layer text animated" id="phrasesBlock">Be strong</h2>
     </section>
-    <script>
-        document.addEventListener('mousemove' , parallax);
-        function parallax(e){
-            this.querySelectorAll('.layer').forEach(layer => {
-                const speed = layer.getAttribute('data-speed');
-
-                const x = (window.innerWidth - e.pageX*speed)/100
-                const y = (window.innerHeight - e.pageY*speed)/100
-
-                layer.style.transform = `translateX(${x}px) translateY(${y}px)`
-        })
-    }
-    </script>
+    <script src="js/script.js"></script>
 </body>
 </html>
