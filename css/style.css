@@ -33,6 +33,8 @@ body {
     opacity: 0;
     transition: opacity 1s linear;
     font-size: 150px;
+    user-select: none;
+    cursor: default;
 }
 
 .text {
